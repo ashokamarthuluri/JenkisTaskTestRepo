@@ -1,5 +1,6 @@
-from inspect import Parameter
+import logging
 import boto3
+from botocore.exceptions import WaiterError
 
 ec2 = boto3.resource('ec2', region_name='us-east-1')
 instance_list = []
