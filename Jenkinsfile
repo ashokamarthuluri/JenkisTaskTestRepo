@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Install boto3') {
       steps {
-        sh 'python -m pip install --user boto3'
+        sh 'python3 -m pip install --user boto3'
       }
     }
     stage('hello') {
