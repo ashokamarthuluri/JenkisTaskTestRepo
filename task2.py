@@ -2,7 +2,7 @@ import logging
 import boto3
 from botocore.exceptions import WaiterError
 
-ec2 = boto3.resource('ec2', region_name='us-east-1', aws_access_key_id='AKIA2RPDPUEDDB6LU2H4', aws_secret_access_key= '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')
+ec2 = boto3.resource('ec2', region_name='us-east-1')
 instance_list = []
 
 for instance in ec2.instances.all():
@@ -10,7 +10,7 @@ for instance in ec2.instances.all():
         instance_list.append(instance.id)
 print(instance_list)
 
-ssm_client = boto3.client('ssm', region_name='us-east-1', aws_access_key_id='AKIA2RPDPUEDDB6LU2H4', aws_secret_access_key= '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')
+ssm_client = boto3.client('ssm', region_name='us-east-1')
 
 response = ssm_client.send_command(
         InstanceIds = instance_list,
