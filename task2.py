@@ -10,6 +10,9 @@ for instance in ec2.instances.all():
         instance_list.append(instance.id)
 print(instance_list)
 
+for i in ec2.instances.all():
+    print(i.image_id)
+
 ssm_client = boto3.client('ssm', region_name='us-east-1')
 
 response = ssm_client.send_command(
