@@ -6,7 +6,7 @@ pipeline {
         sh 'python3 -m pip install --user boto3'
       }
     }
-    stage('hello') {
+    stage('Run Py Script') {
       steps {
         sh 'python3 task2.py'
       }
