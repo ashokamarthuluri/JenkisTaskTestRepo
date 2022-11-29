@@ -16,7 +16,7 @@ response = ssm_client.send_command(
         InstanceIds = instance_list,
         DocumentName = "AWS-RunShellScript",
         Parameters = {
-            'commands' : ['mkdir /home/ec2-user/kumar', 'touch /home/ec2-user/ashok/test1.txt']
+            'commands' : ['mkdir /home/ec2-user/sunil', 'touch /home/ec2-user/sunil/test1.txt']
         }
     )
 print(response)
